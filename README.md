@@ -1,107 +1,55 @@
-# FireflyCareOnHarmonyOS
+# 一、前言
+在这学期的鸿蒙移动应用开发课程中，我将所学知识付诸实践，完成了期末大作业——萤火虫陪诊应用的UI开发。本项目基于方舟开发框架（ArkUI），重点围绕界面设计与交互逻辑展开，通过本地模拟数据完整呈现了应用的核心页面布局与功能展示。虽然在实现上尚未接入真实的网络数据交互，但整个开发过程让我对ArkUI声明式UI的开发模式、组件化构建以及界面动态更新机制有了更深入的理解与掌握。
 
-#### 介绍
+通过本项目的实践，我逐步熟悉了如何使用ArkUI丰富的组件库进行页面搭建，如何通过状态管理与数据绑定实现界面的响应式更新，并初步体验到HarmonyOS应用开发的全流程。尽管当前版本仍存在许多可以优化的细节，代码结构也有进一步完善的空间，但我相信这个项目真实反映了我在本阶段的学习成果，也为后续进行更复杂的业务逻辑开发与网络集成奠定了基础。
 
-基于华为官方示例Login开发：https://gitee.com/harmonyos/codelabs/tree/master/LoginDemo
+ArkUI作为HarmonyOS / OpenHarmony应用开发的声明式UI框架，以其简洁的语法、高效的组件体系与实时预览工具，显著提升了界面开发的效率与体验。我希望通过本次项目的分享，能够帮助更多尚未接触或正在学习ArkUI的开发者，直观地了解其开发模式与实践可能，共同探索鸿蒙生态下应用开发的广阔空间。
 
-结合哔哩哔哩上的鸿蒙免费课程编写的ArkTs项目
+# 二、系统概述
+本项目为一款基于HarmonyOS平台的“萤火虫陪诊”应用原型系统。该系统旨在通过移动设备为有临时就医陪伴需求的用户（如老人、孕妇、行动不便者）与专业的陪诊人员之间，构建一个安全、便捷的服务对接平台。
 
-项目中封装了接口请求数据axios的httpCore，数据持久化PreferenceUtil，提示信息带图标和不带图标的CommonUtils方法，在utils文件夹内部
+本阶段开发聚焦于实现应用客户端的核心用户界面（UI）与前端交互逻辑。项目完整模拟了从用户进入应用、使用服务到管理个人账户的端到端流程。系统主要功能模块包括：用户账户体系：模拟用户注册与登录流程，构建个人身份基础；服务核心功能：涵盖新建陪诊订单、浏览与查看合作医院信息、以及查询历史与当前订单状态；系统交互：提供完整的退出登录等账户安全操作。
 
-封装了一些通用组件，CommonEmpty，CommonHeader，ImgActionTips，OrderProgress，PopupPicker，PopupTimePicker等，在components文件夹内部
+项目利用华为官方集成开发环境DevEco Studio，完全基于ArkUI声明式开发框架从零构建。开发以手机（Phone）设备为主要目标，通过声明式语法、组件化开发和状态管理，将上述功能转化为直观、流畅的视觉界面与交互体验。本次开发虽暂未接入后端网络服务，但完整实现了本地数据驱动下的UI动态响应，清晰展示了应用的业务逻辑与用户使用路径。
 
-模拟数据是抓包的鲸鱼陪诊，页面部分有的是参考的华为，有的是网上找的【不要介意】
+通过完成此项目，不仅能构建出一个结构清晰、可运行的HarmonyOS应用原型，更能系统性掌握使用ArkUI开发具备完整功能链路的中小型移动应用的核心方法，为后续集成网络数据、实现全功能应用打下坚实的前端基础。
 
-其中颜色，字体的变量定义参考的华为官网，地址为：https://developer.huawei.com/consumer/cn/doc/design-guides/color-0000001776857164#section7268141401117
+# 三、项目准备
+## 3.1 开发工具和框架
+本项目的开发严格遵循HarmonyOS官方技术栈，主要依赖以下工具与框架：
 
+### 1. 集成开发环境 (IDE): DevEco Studio
+- **版本**: 推荐使用 4.0 Release 或更高版本。
+- **简介**: DevEco Studio 是华为官方提供的用于开发HarmonyOS及OpenHarmony应用的集成开发环境。它基于IntelliJ IDEA架构，为开发者提供了代码编辑、实时预览、双向调试、模拟器管理、应用打包及上架等一站式能力。
+- **核心用途**: 在本项目中，我们使用它进行项目管理、代码编写、UI界面预览、在本地虚拟设备或真机上运行和调试应用。
 
-#### 效果预览
-| 登录                                                | 主页                                                     | 订单页                                                          | 我的                                                              |
-|---------------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------|
-| ![登录](%E6%88%AA%E5%9B%BE/01_%E7%99%BB%E5%BD%95.png) | ![主页](%E6%88%AA%E5%9B%BE/03_%E4%B8%BB%E9%A1%B5.png) | ![订单页](%E6%88%AA%E5%9B%BE/04_%E8%AE%A2%E5%8D%95%E5%88%97%E8%A1%A8.png) | ![我的](%E6%88%AA%E5%9B%BE/07_%E6%88%91%E7%9A%84.png) |
+### 2. 应用开发框架: ArkUI
+- **类型**: 声明式UI开发框架。
+- **简介**: ArkUI是本项目UI构建的核心。它提供了从简洁的UI描述语法（ArkTS）、丰富的内置组件（如按钮、列表、弹窗）、强大的布局能力（如弹性布局、栅格布局）到完善的动画和状态管理机制的一整套解决方案。通过其声明式编程范式，开发者可以更直观地描述UI界面与数据之间的动态响应关系。
+- **核心用途**: 用于构建“萤火虫陪诊”应用的所有用户界面，实现从静态布局到动态交互（如登录/注册状态切换）的完整前端逻辑。
 
-| 权益列表                                                | 订单填写                                                     | 订单填写                                                          | 订单填写                                                              |
-|---------------------------------------------------|---------------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------------|
-| ![权益列表](%E6%88%AA%E5%9B%BE/04_%E6%9D%83%E7%9B%8A%E5%88%97%E8%A1%A8.png) | ![订单填写](%E6%88%AA%E5%9B%BE/08_%E6%96%B0%E5%BB%BA%E8%AE%A2%E5%8D%95.png) | ![订单填写](%E6%88%AA%E5%9B%BE/08_%E6%96%B0%E5%BB%BA%E8%AE%A2%E5%8D%95_%E9%80%89%E6%8B%A9%E5%8C%BB%E9%99%A2.png) | ![订单填写](%E6%88%AA%E5%9B%BE/09_%E6%96%B0%E5%BB%BA%E8%AE%A2%E5%8D%95_%E9%80%89%E6%8B%A9%E6%97%A5%E6%9C%9F.png) |
+### 3. 开发语言: ArkTS
+- **简介**: ArkTS是HarmonyOS优选的应用开发语言。它基于TypeScript，在保持JavaScript动态语言优势的同时，增加了静态类型检查、更面向对象的编程能力以及ArkUI框架的扩展声明式语法。
+- **核心用途**: 作为项目的编程语言，用于编写所有的UI描述、业务逻辑、状态管理和事件处理代码。
 
+## 3.2 创建项目
+在DevEco Studio中创建项目的步骤如下：首先在欢迎界面选择Create Project，然后在模板选择页签中选取Application下的Empty Ability（空能力）模板。接着配置项目基本信息，包括设置项目名称（如FireflyCompanion）、按反向域名规则填写包名、选择项目保存路径，并确保开发模型为Stage Model、开发语言为ArkTS，同时取消低代码开发选项以进行纯代码开发。确认配置后完成创建，DevEco Studio会自动生成标准的项目结构，其中`entry/src/main/ets/pages/`目录下的`Index.ets`文件将作为我们开发萤火虫陪诊应用的主页面起点。
 
+## 3.3 创建虚拟设备
+为在开发过程中实时预览和调试应用界面，我们需要在DevEco Studio的设备管理器（Device Manager）中创建一个手机虚拟设备。通过选择Phone类型的设备模板（如HUAWEI Mate 60 Pro），下载并配置与项目编译API版本相匹配的系统镜像，完成参数设置后即可启动该虚拟设备。该设备将为我们提供完整的HarmonyOS手机仿真环境，用于运行和测试萤火虫陪诊应用，配合实时预览功能极大提升开发调试效率。
 
-#### 工程目录
+## 3.4 设计思路
+整体设计分为三个层次：
 
-```
-├──entry/src/main/ets/
-│  ├─api  // 接口封装相关
-│  │      apiConstants.ets   // 所有与api相关的类型定义
-│  │      apiEndpoint.ets  // 接口请求方法
-│  │      orderStatusConfig.ets  // 数据相关的常量定义
-│  ├─components  // 组件封装
-│  │      CommonEmpty.ets  
-│  │      CommonHeader.ets
-│  │      ImgActionTips.ets
-│  │      OrderProgress.ets
-│  │      OrderProgressDec.ets
-│  │      PopupHeader.ets
-│  │      PopupPicker.ets
-│  │      PopupTimePicker.ets
-│  │      TelTextInput.ets
-│  ├─constants  // 常量定义
-│  │      CommonConstants.ets
-│  │      config.ets
-│  │      StyleConstants.ets
-│  ├─mock  // 模拟数据
-│  │      ItemData.ets
-│  │      MainViewModel.ets
-│  │      OrderListData.ets
-│  │      packageList.ets
-│  │      publicHospital.ets
-│  │      SourceData.et
-│  ├─pages  // 页面
-│  │      CreateOrderPage.ets
-│  │      LoginPage.ets
-│  │      MainPage.ets
-│  │      OrderDecPage.ets
-│  ├─utils  // 方法
-│  │  │  CommonUtils.ets
-│  │  │  DateUtils.ets
-│  │  │  GlobalContext.ets
-│  │  │  immersiveUtils.ets
-│  │  │  Logger.ets
-│  │  │  LoginUtils.ets
-│  │  │  MultipleDevicesUtils.ets
-│  │  │  PreferenceUtil.ets
-│  │  │  PromptActionClass.ets
-│  │  │  resetDateUtils.ets
-│  │  └─httpCore  // axios接口封装
-│  │          checkStatus.ets
-│  │          http.ets
-│  └─view  // 子页面
-│          HomePage.ets
-│          HomePage_copy.ets
-│          MinePage.ets
-│          OrderList.ets
-│          OrderListPage.ets
-│          ServicePage.ets
-└─resources  // 资源目录
-│   └─base
-│       ├─element
-│       │──── color.json   // 颜色值定义
-│       │──── float.json   // 字体大小等定义
-│       └──── string.json   // 字段定义
-└──module.json5        // Stage模型模块配置文件，主要包含HAP的配置信息、应用在具体设备上的配置信息以及应用的全局配置信息
-```
+### 1. 架构设计
+采用HarmonyOS标准的Stage模型作为应用框架，通过单页面内多功能模块聚合的方式组织内容。应用整体采用底部导航栏（TabBar）作为主要导航模式，划分“首页”、“服务列表”、“订单”、“我的”四大核心板块，形成清晰的信息架构。
 
+### 2. 界面设计
+- **视觉风格**：采用温馨、可信赖的配色方案，以浅色为基调，搭配医疗相关的辅助色彩，营造安心、专业的视觉感受。
+- **布局设计**：遵循HarmonyOS设计规范，使用弹性布局（Flex）和栅格系统确保在不同屏幕尺寸下的适配性。
+- **交互设计**：通过明确的视觉层次和适时的反馈（如下拉刷新、加载状态、操作提示），提升用户的操作确定性和流畅度。
 
-### 相关权限
-
-网络权限：【ohos.permission.INTERNET】
-
-
-### 约束与限制
-
-1.仅支持标准系统上运行，支持设备：华为手机。
-
-2.HarmonyOS系统：HarmonyOS 5.0.4 Release及以上。
-
-3.DevEco Studio版本：DevEco Studio 5.0.4 Release及以上。
-
-4.HarmonyOS SDK版本：HarmonyOS 5.0.4 Release SDK及以上。https://gitee.com/gitee-stars/)
+### 3. 功能模块设计
+- **用户认证流程**：通过独立的登录/注册页面完成用户身份验证，成功后跳转至主界面。
+- **核心功能流**：在首页集中展示可预约服务与医院信息；“订单”模块管理用户所有预约记录；“我的”页面处理个人资料与系统设置。
+- **数据流转**：通过状态管理机制（如AppStorage）在页面间共享关键用户数据（如登录状态），确保界面与数据的实时同步。
