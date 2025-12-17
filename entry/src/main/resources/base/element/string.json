@@ -1,0 +1,348 @@
+{
+  "string": [
+    {
+      "name": "logout_title",
+      "value": "退出登录"
+    },
+    {
+      "name": "logout_confirm_message",
+      "value": "确定要退出登录吗？"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "confirm",
+      "value": "确认"
+    },
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "微光守护，就医不孤单"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "萤火虫陪诊"
+    },
+    {
+      "name": "login_page",
+      "value": "登录页"
+    },
+    {
+      "name": "logo_title",
+      "value": "萤火虫陪诊"
+    },
+    {
+      "name": "logo_subtitle",
+      "value": "微光守护，就医不孤单"
+    },
+    {
+      "name": "login_more",
+      "value": "更多登录方式"
+    },
+    {
+      "name": "account",
+      "value": "账号"
+    },
+    {
+      "name": "password",
+      "value": "密码"
+    },
+    {
+      "name": "login",
+      "value": "登录"
+    },
+    {
+      "name": "register_account",
+      "value": "账号注册"
+    },
+    {
+      "name": "forgot_password",
+      "value": "忘记密码"
+    },
+    {
+      "name": "message_login",
+      "value": "验证码登录"
+    },
+    {
+      "name": "please_input_account",
+      "value": "请输入账号"
+    },
+    {
+      "name": "please_input_password",
+      "value": "请输入密码"
+    },
+    {
+      "name": "incomplete_toast",
+      "value": "功能正在开发中。。。"
+    },
+    {
+      "name": "home_title",
+      "value": "首页"
+    },
+    {
+      "name": "service_title",
+      "value": "服务列表"
+    },
+    {
+      "name": "order_list_title",
+      "value": "订单"
+    },
+    {
+      "name": "mine_title",
+      "value": "我的"
+    },{
+      "name": "mine_title_name",
+      "value": "Mr. Ling"
+    },
+    {
+      "name": "mine_title_email",
+      "value": "https://gitee.com/jules2009"
+    },
+    {
+      "name": "mine_list_news",
+      "value": "打开通知"
+    },
+    {
+      "name": "mine_list_data",
+      "value": "数据存储"
+    },
+    {
+      "name": "mine_list_menu",
+      "value": "菜单设置"
+    },
+    {
+      "name": "mine_list_about",
+      "value": "关于"
+    },
+    {
+      "name": "mine_list_storage",
+      "value": "缓存清理"
+    },
+    {
+      "name": "mine_list_privacy",
+      "value": "隐私协议"
+    },
+    {
+      "name": "open_news",
+      "value": "打开"
+    },
+    {
+      "name": "close_news",
+      "value": "关闭"
+    },
+    {
+      "name": "my_love",
+      "value": "My favorite"
+    },
+    {
+      "name": "history_record",
+      "value": "History"
+    },
+    {
+      "name": "message",
+      "value": "Message"
+    },
+    {
+      "name": "shopping_cart",
+      "value": "Shopping cart"
+    },
+    {
+      "name": "my_goal",
+      "value": "My goal"
+    },
+    {
+      "name": "group",
+      "value": "Group"
+    },
+    {
+      "name": "favorites",
+      "value": "Favorites"
+    },
+    {
+      "name": "recycle_bin",
+      "value": "Recycle Bin"
+    },
+    {
+      "name": "main_page",
+      "value": "Home"
+    },
+    {
+      "name": "mine_page",
+      "value": "Mine"
+    },
+    {
+      "name": "main_page_rankings",
+      "value": "Rankings"
+    },
+    {
+      "name": "main_page_others",
+      "value": "Xiamen Station, we'll see you."
+    },
+    {
+      "name": "main_page_new",
+      "value": "New product debut"
+    },
+    {
+      "name": "main_Page_brand",
+      "value": "Big name flash"
+    },
+    {
+      "name": "main_page_more",
+      "value": "More Big Names"
+    },
+    {
+      "name": "main_page_found",
+      "value": "Find good things"
+    },
+
+    {
+      "name": "mine_button",
+      "value": "Logout"
+    },
+    {
+      "name": "home_list",
+      "value": "List"
+    },
+    {
+      "name": "mine_toggle",
+      "value": "switch"
+    },
+
+    {
+      "name": "open_my_love",
+      "value": "Open my favorite"
+    },
+    {
+      "name": "open_history_record",
+      "value": "Open history"
+    },
+    {
+      "name": "open_message",
+      "value": "Open message"
+    },
+    {
+      "name": "open_shopping_cart",
+      "value": "Open shopping cart"
+    },
+    {
+      "name": "open_my_goal",
+      "value": "Open my goal"
+    },
+    {
+      "name": "open_group",
+      "value": "Open group"
+    },
+    {
+      "name": "open_favorites",
+      "value": "Open favorites"
+    },
+    {
+      "name": "open_recycle_bin",
+      "value": "Open Recycle Bin"
+    },
+    {
+      "name": "open_rankings",
+      "value": "Open rankings"
+    },
+    {
+      "name": "open_new",
+      "value": "Open new product debut"
+    },
+    {
+      "name": "open_brand",
+      "value": "Open big name flash"
+    },
+    {
+      "name": "open_found",
+      "value": "Open find good things"
+    },
+
+    {
+      "name": "open_data",
+      "value": "Open data management"
+    },
+    {
+      "name": "open_menu",
+      "value": "Open menu settings"
+    },
+    {
+      "name": "open_about",
+      "value": "Open about"
+    },
+    {
+      "name": "clear_storage",
+      "value": "Clear cache succeeded"
+    },
+    {
+      "name": "check_privacy",
+      "value": "Check privacy agreement"
+    },
+
+
+
+
+
+    {
+      "name": "register_title",
+      "value": "注册账号"
+    },
+    {
+      "name": "register_subtitle",
+      "value": "创建您的新账号"
+    },
+    {
+      "name": "nickname_placeholder",
+      "value": "请输入昵称"
+    },
+    {
+      "name": "confirm_password",
+      "value": "请确认密码"
+    },
+    {
+      "name": "register",
+      "value": "注册"
+    },
+    {
+      "name": "already_have_account",
+      "value": "已有账号？"
+    },
+    {
+      "name": "back_to_login",
+      "value": "返回登录"
+    },
+    {
+      "name": "register_success",
+      "value": "注册成功，跳转到登录页面"
+    },
+    {
+      "name": "account_exist",
+      "value": "账号已存在"
+    },
+    {
+      "name": "register_failed",
+      "value": "注册失败，请重试"
+    },
+    {
+      "name": "account_length_error",
+      "value": "账号长度至少3位"
+    },
+    {
+      "name": "password_length_error",
+      "value": "密码长度至少6位"
+    },
+    {
+      "name": "password_not_match",
+      "value": "两次输入的密码不一致"
+    },
+
+    {
+      "name": "login_error",
+      "value": "账号或密码错误"
+    }
+  ]
+}

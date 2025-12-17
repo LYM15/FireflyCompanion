@@ -1,0 +1,167 @@
+卷 新加卷 的文件夹 PATH 列表
+卷序列号为 ECF9-949C
+D:.
+│  module.json5
+│  output.txt
+│  
+├─ets
+│  ├─api
+│  │      apiConstants.ets
+│  │      apiEndpoint.ets
+│  │      orderStatusConfig.ets
+│  │      
+│  ├─components
+│  │      CommonEmpty.ets
+│  │      CommonHeader.ets
+│  │      ImgActionTips.ets
+│  │      OrderProgress.ets
+│  │      OrderProgressDec.ets
+│  │      PopupHeader.ets
+│  │      PopupPicker.ets
+│  │      PopupTimePicker.ets
+│  │      TelTextInput.ets
+│  │      
+│  ├─constants
+│  │      CommonConstants.ets
+│  │      config.ets
+│  │      StyleConstants.ets
+│  │      
+│  ├─entryability
+│  │      EntryAbility.ets
+│  │      
+│  ├─entrybackupability
+│  │      EntryBackupAbility.ets
+│  │      
+│  ├─mock
+│  │      ItemData.ets
+│  │      MainViewModel.ets
+│  │      OrderListData.ets
+│  │      packageList.ets
+│  │      publicHospital.ets
+│  │      SourceData.ets
+│  │      TabItem.ets
+│  │      
+│  ├─pages
+│  │      CreateOrderPage.ets
+│  │      createOrderPage_循环方式，未解决bindSheet的问题.ets
+│  │      LoginPage.ets
+│  │      MainPage.ets
+│  │      OrderDecPage.ets
+│  │      
+│  ├─utils
+│  │  │  CommonUtils.ets
+│  │  │  DateUtils.ets
+│  │  │  GlobalContext.ets
+│  │  │  immersiveUtils.ets
+│  │  │  Logger.ets
+│  │  │  LoginUtils.ets
+│  │  │  MultipleDevicesUtils.ets
+│  │  │  PreferenceUtil.ets
+│  │  │  PromptActionClass.ets
+│  │  │  resetDateUtils.ets
+│  │  │  
+│  │  └─httpCore
+│  │          checkStatus.ets
+│  │          http.ets
+│  │          
+│  └─view
+│          HomePage.ets
+│          HomePage_copy.ets
+│          MinePage.ets
+│          OrderList.ets
+│          OrderListPage.ets
+│          ServicePage.ets
+│          
+└─resources
+    ├─base
+    │  ├─element
+    │  │      color.json
+    │  │      float.json
+    │  │      string.json
+    │  │      
+    │  ├─media
+    │  │      background.png
+    │  │      equity_buy_medicine.png
+    │  │      equity_consultation.png
+    │  │      equity_half_day.png
+    │  │      equity_inspect.png
+    │  │      firefly.svg
+    │  │      fireflyBlock.svg
+    │  │      fireflyBlockBold.svg
+    │  │      fireflyBlockLight.svg
+    │  │      foreground.png
+    │  │      icon.png
+    │  │      icon_address.svg
+    │  │      icon_arrow_down.svg
+    │  │      icon_arrow_left.svg
+    │  │      icon_arrow_right.svg
+    │  │      icon_arrow_up.svg
+    │  │      icon_mine_calendar.svg
+    │  │      icon_mine_home.svg
+    │  │      icon_mine_user.svg
+    │  │      icon_mine_wallet.svg
+    │  │      icon_search.svg
+    │  │      icon_swap.svg
+    │  │      ic_about.png
+    │  │      ic_account.png
+    │  │      ic_brand.png
+    │  │      ic_circle.png
+    │  │      ic_data.png
+    │  │      ic_discover_normal.png
+    │  │      ic_discover_selected.png
+    │  │      ic_favorite.png
+    │  │      ic_first_card.png
+    │  │      ic_found.png
+    │  │      ic_fourth_card.png
+    │  │      ic_home_normal.png
+    │  │      ic_home_selected.png
+    │  │      ic_icon.png
+    │  │      ic_logo.png
+    │  │      ic_love.png
+    │  │      ic_menu.png
+    │  │      ic_message.png
+    │  │      ic_mine_normal.png
+    │  │      ic_mine_selected.png
+    │  │      ic_new.png
+    │  │      ic_news.png
+    │  │      ic_privacy.png
+    │  │      ic_record.png
+    │  │      ic_recycle.png
+    │  │      ic_second_card.png
+    │  │      ic_shopping.png
+    │  │      ic_storage.png
+    │  │      ic_target.png
+    │  │      ic_third_card.png
+    │  │      ic_top.png
+    │  │      layered_image.json
+    │  │      noData.svg
+    │  │      od_10.png
+    │  │      od_20.png
+    │  │      od_30.png
+    │  │      od_40.png
+    │  │      startIcon.png
+    │  │      startIconBlock.png
+    │  │      tab_firefly.svg
+    │  │      tab_firefly_block.svg
+    │  │      tab_firefly_block_light.svg
+    │  │      tab_mine.svg
+    │  │      tab_mine_block.svg
+    │  │      tab_order.svg
+    │  │      tab_order_block.svg
+    │  │      tab_service.svg
+    │  │      tab_service_block.svg
+    │  │      toast_icon_check_filled.svg
+    │  │      toast_icon_close_filled.svg
+    │  │      toast_icon_help_filled.svg
+    │  │      toast_icon_info_filled.svg
+    │  │      
+    │  └─profile
+    │          backup_config.json
+    │          main_pages.json
+    │          route_map.json
+    │          
+    ├─dark
+    │  └─element
+    │          color.json
+    │          
+    └─rawfile

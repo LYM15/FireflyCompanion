@@ -1,0 +1,60 @@
+{
+  "media": [
+    {
+      "name": "icon_clear",
+      "src": "./icon_clear.svg"
+    },
+    {
+      "name": "icon_no_result",
+      "src": "./icon_no_result.png"
+    },
+    {
+      "name": "hospital_1",
+      "src": "./hospital_1.png"
+    },
+    {
+      "name": "hospital_2",
+      "src": "./hospital_2.png"
+    },
+    {
+      "name": "hospital_3",
+      "src": "./hospital_3.png"
+    },
+    {
+      "name": "hospital_4",
+      "src": "./hospital_4.png"
+    },
+    {
+      "name": "hospital_5",
+      "src": "./hospital_5.png"
+    },
+    {
+      "name": "hospital_6",
+      "src": "./hospital_6.png"
+    },
+    {
+      "name": "icon_search",
+      "src": "./icon_search.svg"
+    },
+    {
+      "name": "icon_address",
+      "src": "./icon_address.svg"
+    },
+    {
+      "name": "icon_arrow_down",
+      "src": "./icon_arrow_down.svg"
+    },
+    {
+      "name": "hospital_11",
+      "src": "./hospital_11.png"
+    },
+    {
+      "name": "hospital_22",
+      "src": "./hospital_22.png"
+    },
+    {
+      "name": "hospital_33",
+      "src": "./hospital_33.png"
+    }
+  ]
+}
